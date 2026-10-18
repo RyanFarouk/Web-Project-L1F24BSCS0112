@@ -1,0 +1,818 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #111;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* 2. Navigation Bar (Matches Sonos exact look) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 85px;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-size: 15px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-icons a {
+  color: #111;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1;
+  transition: opacity 0.2s;
+}
+
+.nav-icons a:hover {
+  opacity: 0.6;
+}
+
+/* 3. Hero Section (Matches screenshot) */
+.hero {
+  position: relative;
+  height: calc(100vh - 85px);
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.42);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: clamp(38px, 5.5vw, 68px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 26px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: rgba(35, 35, 35, 0.65);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.hero-btn:hover {
+  background-color: rgba(55, 55, 55, 0.85);
+  transform: scale(1.02);
+}
+
+/* 4. Common Buttons & Labels */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 14px;
+}
+
+.btn-dark {
+  background-color: #111;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  opacity: 0.85;
+}
+
+.small-title {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+/* 5. Featured Product (Beam Ultra) */
+.feature-product {
+  display: flex;
+  align-items: center;
+  background-color: #242424;
+  color: #fff;
+  max-width: 1050px;
+  margin: 60px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.feature-text {
+  flex: 1;
+  padding: 44px;
+}
+
+.feature-text h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.feature-text p {
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  max-width: 320px;
+}
+
+.btn-outline {
+  display: inline-block;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 9px 24px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+.feature-image {
+  flex: 1;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.feature-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Sound Showcase Section (Opened Speaker) */
+.sound-showcase {
+  max-width: 1050px;
+  margin: 70px auto 100px;
+  padding: 0 20px;
+}
+
+.sound-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sound-heading h2 {
+  font-size: clamp(34px, 4.5vw, 54px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.sound-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.sound-text {
+  flex: 1;
+  max-width: 420px;
+}
+
+.sound-text h3 {
+  font-size: clamp(30px, 3.8vw, 44px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.sound-text p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.innovation-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 10px 18px;
+}
+
+.innovation-badge strong {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.innovation-badge span {
+  font-size: 11px;
+  color: #666;
+  font-weight: 500;
+}
+
+.sound-image {
+  flex: 1.1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sound-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 7. Expertly Tuned Section (Producer Story) */
+.expertly-tuned-section {
+  max-width: 1050px;
+  margin: 90px auto 110px;
+  padding: 0 20px;
+}
+
+.tuned-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.tuned-image-wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 460px;
+}
+
+.tuned-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.quote-card {
+  position: absolute;
+  bottom: -25px;
+  right: -30px;
+  background-color: #ffffff;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  padding: 14px 18px;
+  max-width: 310px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.quote-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.quote-author {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 2px;
+}
+
+.quote-role {
+  font-size: 11px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.tuned-text {
+  flex: 1;
+  max-width: 440px;
+}
+
+.tuned-text h2 {
+  font-size: clamp(34px, 4.2vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.tuned-text p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* 8. Product Cards Section */
+.products-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card .link {
+  color: #111;
+  font-weight: bold;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* 7. Setup Section */
+.setup-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.setup-image,
+.setup-text {
+  flex: 1;
+}
+
+.setup-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.setup-text h2 {
+  font-size: 32px;
+  margin: 8px 0;
+}
+
+.setup-text p {
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* 8. Footer */
+.footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-links {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #333;
+}
+
+.footer-links h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: block;
+  color: #999;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-top: 15px;
+}
+
+/* 9. Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 20px;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+
+  .feature-product,
+  .sound-section,
+  .tuned-container,
+  .cards-container,
+  .setup-section,
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .quote-card {
+    position: static;
+    margin-top: 16px;
+    max-width: 100%;
+  }
+}
+
+.bottomvideo {
+  position: relative;
+  height: calc(100vh - 85px);
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.bottomvideo-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.bottomvideo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.42);
+  z-index: 2;
+}
+
+.bottomvideo-content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.bottomvideo-content h1 {
+  font-size: clamp(38px, 5.5vw, 68px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 26px;
+}
+
+.bottompic {
+  position: relative;
+  height: calc(100vh - 85px);
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: left;
+  color: #fff;
+  overflow: hidden;
+}
+
+.bottompic img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.bottompic-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.42);
+  z-index: 2;
+}
+
+.bottompic-content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.bottompic-content h1 {
+  font-size: clamp(38px, 5.5vw, 68px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 26px;
+}
+
+.balanced-section {
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 37px 0;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 65px;
+  background: #fff;
+  color: #000;
+}
+
+.balanced-content {
+  max-width: 420px;
+}
+
+.balanced-content h1 {
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: -1.5px;
+  margin: 0 0 14px;
+}
+
+.balanced-content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #333;
+  margin: 0;
+}
+
+.balanced-media {
+  width: 100%;
+  aspect-ratio: 469 / 313;
+  overflow: hidden;
+  position: relative;
+}
+
+.balanced-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .nav-icons {
+    gap: 14px;
+  }
+
+  .hero,
+  .bottomvideo,
+  .bottompic {
+    height: 70vh;
+    min-height: 420px;
+  }
+
+  .feature-product,
+  .sound-section,
+  .tuned-container,
+  .cards-container,
+  .setup-section,
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .feature-product {
+    margin: 30px 15px;
+  }
+
+  .feature-text {
+    padding: 25px;
+  }
+
+  .quote-card {
+    position: static;
+    margin-top: 15px;
+    max-width: 100%;
+  }
+
+  .balanced-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 30px 20px;
+  }
+
+  .balanced-content h1 {
+    font-size: 40px;
+  }
+
+  .cards-container {
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .footer-links {
+    gap: 25px;
+  }
+
+  .bottompic-content {
+    margin-right: 0;
+  }
+
+  .sound-showcase,
+  .expertly-tuned-section,
+  .products-section,
+  .setup-section {
+    margin-top: 45px;
+    margin-bottom: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 15px;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .hero-content h1,
+  .bottomvideo-content h1,
+  .bottompic-content h1 {
+    font-size: 38px;
+  }
+
+  .bottompic-content {
+    padding: 20px;
+  }
+
+  .balanced-media {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+}
