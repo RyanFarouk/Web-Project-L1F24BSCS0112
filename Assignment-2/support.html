@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Sonos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="support.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">SONOS</a>
+        <nav class="nav-links">
+            <a href="shop.html">Shop</a>
+            <a href="new-arrivals.html">New Arrivals</a>
+            <a href="learn.html">Learn</a>
+            <a href="support.html" class="active-link">Support</a>
+            <a href="professional.html">Professional</a>
+        </nav>
+        <div class="nav-icons">
+            <a href="index.html#account" title="Account">👤</a>
+            <a href="index.html#search" title="Search">🔍</a>
+            <a href="index.html#cart" title="Cart">🛒</a>
+        </div>
+    </header>
+
+    <main class="support-page">
+
+        <section class="support-hero">
+            <h1>How can we help?</h1>
+            <div class="support-search-bar">
+                <span>🔍</span>
+                <input type="text" id="supportSearch" placeholder="How do I set up my Sonos speaker?" aria-label="Search support topics">
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <h2>Get in touch</h2>
+
+            <div class="contact-cards">
+                <div class="contact-box">
+                    <div class="contact-box-top">
+                        <span class="contact-title">💬 Chat</span>
+                        <a href="#topics" class="contact-action">Start chat →</a>
+                    </div>
+                    <p class="status-line"><span class="status-dot"></span> Available 24/7</p>
+                    <p class="wait-line">Estimated wait: 0 minutes</p>
+                </div>
+
+                <div class="contact-box">
+                    <div class="contact-box-top">
+                        <span class="contact-title">📞 Call us</span>
+                        <a href="tel:+31858884234" class="contact-action">+31 85 888 4234</a>
+                    </div>
+                    <p class="status-line"><span class="status-dot"></span> Available 24/7</p>
+                    <p class="wait-line">Estimated wait: 5 minutes</p>
+                </div>
+            </div>
+
+            <button type="button" id="countryButton" class="country-toggle">Other countries (English) ⌄</button>
+
+            <div id="countryList" class="country-list">
+                <a href="#">United States (English)</a>
+                <a href="#">United Kingdom (English)</a>
+                <a href="#">Canada (English / Français)</a>
+                <a href="#">Germany (Deutsch)</a>
+                <a href="#">France (Français)</a>
+                <a href="#">Netherlands (Nederlands)</a>
+                <a href="#">Australia (English)</a>
+                <a href="#">Pakistan (English)</a>
+            </div>
+        </section>
+
+        <section class="topics-section" id="topics">
+            <h2>Browse by topic</h2>
+
+            <div class="topics-grid">
+                <a href="#products" class="topic-card">
+                    <span class="topic-icon">📱</span>
+                    <span>Sonos Apps</span>
+                </a>
+
+                <a href="#products" class="topic-card">
+                    <span class="topic-icon">📶</span>
+                    <span>Connection Issues</span>
+                </a>
+
+                <a href="#products" class="topic-card">
+                    <span class="topic-icon">🔊</span>
+                    <span>Audio Issues</span>
+                </a>
+
+                <a href="#products" class="topic-card">
+                    <span class="topic-icon">🔄</span>
+                    <span>Update Issues</span>
+                </a>
+
+                <a href="#products" class="topic-card">
+                    <span class="topic-icon">🎙️</span>
+                    <span>Voice Services</span>
+                </a>
+
+                <a href="#products" class="topic-card">
+                    <span class="topic-icon">📦</span>
+                    <span>Orders and Returns</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="products-section" id="products">
+            <h2>Browse by product</h2>
+
+            <div class="category-tabs">
+                <button type="button" class="category-btn" data-category="all">All</button>
+                <button type="button" class="category-btn" data-category="speakers">Speakers</button>
+                <button type="button" class="category-btn" data-category="soundbars">Soundbars</button>
+                <button type="button" class="category-btn" data-category="headphones">Headphones</button>
+                <button type="button" class="category-btn" data-category="hometheater">Home Theater</button>
+            </div>
+
+            <div class="products-grid">
+                <article class="product-card" data-category="speakers">
+                    <div class="product-tile">
+                        <img src="media/speaker.png" alt="Smart Speakers">
+                    </div>
+                    <h3>Smart Speakers</h3>
+                </article>
+
+                <article class="product-card" data-category="speakers">
+                    <div class="product-tile">
+                        <img src="media/speaker.png" alt="Wireless Speaker">
+                    </div>
+                    <h3>Wireless Speaker</h3>
+                </article>
+
+                <article class="product-card" data-category="soundbars">
+                    <div class="product-tile">
+                        <img src="media/beamultra.png" alt="Beam Ultra">
+                    </div>
+                    <h3>Beam Ultra</h3>
+                </article>
+
+                <article class="product-card" data-category="headphones">
+                    <div class="product-tile">
+                        <img src="media/headphones.jpg" alt="Sonos Ace">
+                    </div>
+                    <h3>Sonos Ace</h3>
+                </article>
+
+                <article class="product-card" data-category="hometheater">
+                    <div class="product-tile">
+                        <img src="media/hometheater.jpg" alt="Home Theater">
+                    </div>
+                    <h3>Home Theater</h3>
+                </article>
+            </div>
+
+            <div class="browse-all-wrap">
+                <a href="shop.html" class="pill-btn">Browse all products →</a>
+            </div>
+        </section>
+
+        <section class="resources-section">
+            <h2>Other resources</h2>
+
+            <div class="resources-grid">
+                <article class="resource-card">
+                    <div class="resource-photo">
+                        <img src="media/setup.jpg" alt="Download the Sonos app">
+                    </div>
+                    <h3>Download the Sonos app</h3>
+                    <p>Available for iOS, Android, FireOS, Windows, and macOS.</p>
+                    <div class="resource-links">
+                        <a href="learn.html">Downloads →</a>
+                        <a href="learn.html">Release notes →</a>
+                    </div>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-photo">
+                        <img src="media/opened-speaker.png" alt="The Sonos User Guide">
+                    </div>
+                    <h3>The Sonos User Guide</h3>
+                    <p>Manuals, Quick Start guides, and legal booklets for every product.</p>
+                    <div class="resource-links">
+                        <a href="learn.html">See User Guide →</a>
+                    </div>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-photo">
+                        <img src="media/producer.png" alt="Browse our available services">
+                    </div>
+                    <h3>Browse our available services</h3>
+                    <p>Music, radio, and podcasts for your Sonos system.</p>
+                    <div class="resource-links">
+                        <a href="learn.html">Browse services →</a>
+                    </div>
+                </article>
+
+                <article class="resource-card">
+                    <div class="resource-photo">
+                        <img src="media/bottompic.png" alt="Ask the Community">
+                    </div>
+                    <h3>Ask the Community</h3>
+                    <p>Ask questions and share tips with Sonos owners worldwide.</p>
+                    <div class="resource-links">
+                        <a href="#contact">Community →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="get-support-banner">
+            <div class="get-support-inner">
+                <div class="get-support-copy">
+                    <h2>Get support</h2>
+                    <p>We can help answer questions and solve problems. Chat with a technician or give us a call.</p>
+                </div>
+                <a href="#contact" class="pill-btn">Contact Us →</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-newsletter">
+            <div class="newsletter-intro">
+                <h2>Never miss a beat or an offer</h2>
+                <p>Subscribe to get the latest updates on new products and exclusive offers.</p>
+            </div>
+
+            <div class="newsletter-form">
+                <form action="#" method="get">
+                    <input type="email" placeholder="Enter email address" aria-label="Email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="newsletter-disclaimer">
+                    You are agreeing to receive updates, promotional offers, and other messages from Sonos.
+                    You may unsubscribe at any time. For more information, review our
+                    <a href="#">Privacy Statement</a>.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Help</h4>
+                <a href="#">Account</a>
+                <a href="#">Order Status</a>
+                <a href="#">Postage and Delivery</a>
+                <a href="#">Start a Return</a>
+                <a href="#">Returns Policy</a>
+                <a href="#">Store Locator</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Terms of Sale</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Offers</h4>
+                <a href="#">Last chance</a>
+                <a href="#">Certified Refurbished</a>
+                <a href="#">Sonos Upgrade Programme</a>
+                <a href="#">Corporate Sales</a>
+                <a href="#">Sonos Beta</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>About Sonos</h4>
+                <a href="#">Our Company</a>
+                <a href="#">News</a>
+                <a href="#">Media Kits</a>
+                <a href="#">Careers</a>
+                <a href="#">Investors</a>
+                <a href="#">Sustainability and Impact</a>
+                <a href="#">How It Started</a>
+                <a href="#">Blog</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>For Businesses</h4>
+                <a href="#">Installed Solutions</a>
+                <a href="#">Dealer Store</a>
+                <a href="#">Developer Portal</a>
+                <a href="#">Trades</a>
+                <a href="#">Works with Sonos</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Categories</h4>
+                <a href="#">Headphones</a>
+                <a href="#">Speakers</a>
+                <a href="#">Portable Speakers</a>
+                <a href="#">Home Theatre</a>
+                <a href="#">Soundbars</a>
+                <a href="#">Sets</a>
+                <a href="#">Architectural</a>
+                <a href="#">Audio Components</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Products</h4>
+                <a href="#">Sonos Ace Ultra</a>
+                <a href="#">Beam Ultra</a>
+                <a href="#">Sonos Play</a>
+                <a href="#">Sonos Ace</a>
+                <a href="#">Arc Ultra</a>
+                <a href="#">Beam (Gen 2)</a>
+                <a href="#">Ray</a>
+                <a href="#">Era 100</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sonos, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="support.js"></script>
+</body>
+
+</html>
