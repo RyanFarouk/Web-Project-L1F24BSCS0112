@@ -442,6 +442,9 @@
     font-size: 13px;
     line-height: 1.6;
 }
+.topic-card.hidden {
+    display: none !important;
+}
 
 @media (max-width: 900px) {
     .topics-grid {
